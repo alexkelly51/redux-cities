@@ -13,7 +13,7 @@ class City extends Component {
   render () {
 
     return (
-      <div onClick={this.handleClick} key={this.props.city.address} className="list-group-item">
+      <div onClick={this.handleClick} key={this.props.city.address} className={(this.props.city == this.props.selectedCity) ? 'list-group-item active' : 'list-group-item'}>
         <div className="card-description">
           <h2>{this.props.city.name}</h2>
         </div>
